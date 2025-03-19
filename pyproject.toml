@@ -1,0 +1,9 @@
+[project]
+name = "etl-python-excel"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ydata-profiling>=4.15.0",
+]
