@@ -7,5 +7,6 @@ requires-python = ">=3.12"
 dependencies = [
     "pydantic>=2.10.6",
     "setuptools>=77.0.3",
+    "streamlit>=1.43.2",
     "ydata-profiling>=4.15.0",
 ]
