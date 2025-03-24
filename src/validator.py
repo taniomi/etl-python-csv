@@ -15,7 +15,7 @@ class AdData(BaseModel):
     Link_clicks: Optional[int] = None
     Impressions: Optional[int] = None
     Conversions: Optional[int] = None
-    Segmentação: str
+    Segmentação: Optional[str] = None
     Tipo_de_Anúncio: str
     Fase: str
 
