@@ -36,7 +36,7 @@ if uploaded_file:
         if invalid:
             erros_formatados = [
                 {
-                    "Index": i,
+                    "Index": i + 2,
                     "Error": e,
                     **r  # expande os campos da linha original
                 } for i, r, e in invalid
