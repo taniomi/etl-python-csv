@@ -1,6 +1,6 @@
-# etl-python-excel
+# etl-python-csv
 
-Python ETL with data contract to validate Excel
+Python ETL with data contract to validate CSV
 
 **Tech:** python, git, pydantic, pandas, streamlit, ydata-profiling
 
