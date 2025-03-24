@@ -4,10 +4,14 @@ Python ETL with data contract to validate CSV
 
 **Tech:** python, git, pydantic, pandas, streamlit, ydata-profiling
 
-Projeto feito baseado na live [Pipeline ETL com Python: Validando Dados e Planilhas de Excel para BI (Projeto end-to-end!)
-](https://youtu.be/JuOyNPjAer8) da Jornada de Dados.
+## Agradecimentos
 
-O repo feito na live: [etl-python-excel-aovivo](https://github.com/lvgalvao/etl-python-excel-aovivo).
+Agradecimentos especiais ao [@lvgalvao](https://github.com/lvgalvao) pelo conhecimento disponibilizado gratuitamente!
+
+O projeto feito baseado na proposta da live [Pipeline ETL com Python: Validando Dados e Planilhas de Excel para BI (Projeto end-to-end!)
+](https://youtu.be/JuOyNPjAer8).
+
+O repo feito durante a live: [etl-python-excel-aovivo](https://github.com/lvgalvao/etl-python-excel-aovivo).
 
 ## Explicando o projeto e o desafio
 
@@ -26,10 +30,10 @@ O repo feito na live: [etl-python-excel-aovivo](https://github.com/lvgalvao/etl-
 ## Planejando as etapas do projeto
 
 1. Criar o projeto (10 minutos) - Github e o projeto Python  
-2. Uma análise exploratória dos meus dados (20 minutos) *(segredo!)*  
-3. Explicação do Pydantic e do Pandora (30 minutos)  
-   - *(ferramentas de validação de dados em tempo real)*  
-4. Aplicação de validação (30 minutos)  
+2. Uma análise exploratória dos meus dados (20 minutos)
+3. Explicação do Pydantic e do Pandora (30 minutos)
+   - *(ferramentas de validação de dados em tempo real)*
+4. Aplicação de validação (30 minutos)
 5. Salvamento no banco de dados (30 minutos)
 
 ## Análise exploratória (Pandas Profiling)
@@ -45,16 +49,16 @@ A análise exploratória do ydata-profiling está em [report.html](/output/repor
 
 - *pandera:* valida o dataset inteiro
 - *pydantic:* valida cada linha como se fosse um objeto
-- Vamos utilizar o *pydantic*
-- No *pydantic*, definimos quais colunas e quais tipos de dados esperamos para cada uma (como um dict dtypes!)
 
-## Criando o contrato de dados + script para leitura e transformação de CSV
+Vamos utilizar o *pydantic* para firmar o contrato de dados.
+No *pydantic*, definimos quais colunas e quais tipos de dados esperamos para cada uma (como um dict dtypes!).
 
-> O quão escalável é o *pydantic*?  
+### Aplicação da validação
 
-O *pydantic* e o *pandera* são Open Source, e muito utilizados, então não precisa reinventar a roda.  
-
-- Estude os modelos de validação de dados na documentação do *pydantic*, lá já deve ter exatamente o que você precisa!
+O [validator.py](/src/validator.py) foi construído utilizando o arquivo [data.csv](/data/data.csv).
+Para validar o validador, o csv [data_2025.csv](/data/data_2025.csv) foi utilizado.
+Podemos verificar que o csv [data_2025-validated.csv](/data/data_2025.csv) atende ao contrato de dados. É o arquivo corrigido manualmente.
+É importante notar que o validador apenas aponta os erros no arquivo, mas não os corrige.
 
 ## Estrutura básica do projeto
 
